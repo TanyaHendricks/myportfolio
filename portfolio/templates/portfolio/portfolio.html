@@ -4,57 +4,27 @@
 
 <style>
     .image-thumbnail{
-        height: 400px;
-        object-fit:cover;
-    }
-    .document-thumbnail{
         height: 300px;
         object-fit:cover;
-    }
 </style>
 
-<h1>I am a...</h1>
+<h1>I am...</h1>
 <div class="m-5">
     <div class="container">
         <div class="row">
 
-            <div class="col-md-4">
-                <div class="card my-3">
-                    <img class="image-thumbnail" src="https://img.heartlight.org/overlazy/creations/4394.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>                      
-                    </div>
-                  </div>             
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card my-3">
-                    <img class="image-thumbnail" src="https://cdn.shopify.com/s/files/1/1457/1636/products/SingtotheLordIsaiah12-5_1600x.jpg?v=1628082470" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>                      
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-4">
-                <div class="card my-3">
-                    <img class="image-thumbnail" src="https://img.heartlight.org/overlazy/creations/4394.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>                      
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-4">
-                <div class="card my-3">
-                    <img class="image-thumbnail" src="https://img.heartlight.org/overlazy/creations/4394.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>                      
-                    </div>
-                  </div>             
-            </div>
-
-            
+          {% for interest in interests %}
+          <div class="col-md-3">
+            <div class="card my-3">
+                <img class="image-thumbnail" src="{{interest.image.url}}" class="card-img-top" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">"{{interest.title}}"</h5>                      
+                </div>
+              </div>             
+          </div>
+          {% empty %}
+          <h3>No images...</h3>
+          {% endfor %}       
 
         </div>         
     </div>
@@ -65,66 +35,20 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
-                <div class="card my-3">
-                    <img class="document-thumbnail" src="https://cdn.corporatefinanceinstitute.com/assets/CBCA_Certificate_CFI.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Card title</h5> 
-                      <a href="{% url 'document' 5 %}" class="btn btn-outline-dark">View</a>                    
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-3">
-                <div class="card my-3">
-                    <img class="document-thumbnail" src="https://cdn.corporatefinanceinstitute.com/assets/Business-letter-format.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Card title</h5> 
-                      <a href="{% url 'document' 5 %}" class="btn btn-outline-dark">View</a>                    
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-3">
-                <div class="card my-3">
-                    <img class="document-thumbnail" src="https://cdn.corporatefinanceinstitute.com/assets/CBCA_Certificate_CFI.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Card title</h5> 
-                      <a href="{% url 'document' 5 %}" class="btn btn-outline-dark">View</a>                    
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-3">
-                <div class="card my-3">
-                    <img class="document-thumbnail" src="https://cdn.corporatefinanceinstitute.com/assets/CBCA_Certificate_CFI.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Card title</h5> 
-                      <a href="{% url 'document' 5 %}" class="btn btn-outline-dark">View</a>                    
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-3">
-                <div class="card my-3">
-                    <img class="document-thumbnail" src="https://cdn.corporatefinanceinstitute.com/assets/CBCA_Certificate_CFI.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Card title</h5> 
-                      <a href="{% url 'document' 5 %}" class="btn btn-outline-dark">View</a>                    
-                    </div>
-                  </div>             
-            </div>
-
-            <div class="col-md-3">
-                <div class="card my-3">
-                    <img class="document-thumbnail" src="https://cdn.corporatefinanceinstitute.com/assets/CBCA_Certificate_CFI.jpg" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Card title</h5> 
-                      <a href="{% url 'document' 5 %}" class="btn btn-outline-dark">View</a>                    
-                    </div>
-                  </div>             
-            </div>
-
+          {% for document in documents %}
+          <div class="col-md-3">
+              <div class="card my-3">
+                  <img class="image-thumbnail" src="{{document.image.url}}" class="card-img-top" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">"{{document.title}}"</h5> 
+                    <a href="{% url 'document' document.id %}" class="btn btn-outline-dark">View</a>                  
+                  </div>
+                </div>             
+          </div>
+          {% empty %}
+          <h3>No attachments...</h3>
+          {% endfor %}  
+   
         </div>         
     </div>
     

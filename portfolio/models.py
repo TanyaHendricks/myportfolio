@@ -1,52 +1,69 @@
+from typing import Any
 from django.db import models
+import uuid
+
+from django.db.models.fields import AutoField
 
 # Create your models here.
+
 
 class Interest(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False, unique=True)
     description = models.TextField(max_length=300, null=False, blank=False)
-    def _str_(self):
+    image = models.ImageField(null=False, blank=False, default='')
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
         return self.title
 
 class Website(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False, unique=True)
-    image = models.ImageField(null=False, blank=False)
+    image = models.ImageField(null=False, blank=False, default='')
     url = models.URLField(null=False, blank=False)
-    def _str_(self):
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
         return self.title
 
 class Institution(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False, unique=True)
-    description = models.TextField(max_length=300, null=False, blank=False)
+    description = models.TextField(max_length=1000, null=False, blank=False)
     logo = models.ImageField(null=True, blank=True)
-    website = models.ForeignKey(Website, on_delete=models.RESTRICT, null=True, blank=True)
-    def _str_(self):
+    website_id = models.ForeignKey(Website, on_delete=models.RESTRICT, null=True, blank=True)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
         return self.name 
 
 class DocumentType(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False, unique=True)
     description = models.TextField(max_length=300, null=False, blank=False)
-    def _str_(self):
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
         return self.name
 
-
 class Experience(models.Model):
+    EXPERIENCE_TYPE = (
+        ('Education', 'Learning Experience'),
+        ('Employement', 'Employment Experience'),
+        ('Project', 'Project Experience'),
+    )
+    type = models.CharField(max_length=100, null=False, blank=False, default='', choices=EXPERIENCE_TYPE)
     title = models.CharField(max_length=100, null=False, blank=False)
-    institution = models.ForeignKey(Institution, on_delete=models.RESTRICT)
-    commenced = models.DateField()
-    completed = models.DateField()
+    institution_id = models.ForeignKey(Institution, on_delete=models.RESTRICT)
+    commenced = models.DateField(null=False, blank=False)
+    completed = models.DateField(null=False, blank=False)
     description = models.TextField(max_length=1000, null=False, blank=False)
-    def _str_(self):
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
         return self.title
 
 class Document(models.Model):    
-    document_type = models.ForeignKey(DocumentType, on_delete=models.RESTRICT)
+    document_type = models.ForeignKey(DocumentType, on_delete=models.RESTRICT, default='')
     title = models.CharField(max_length=100, null=False, blank=False, unique=True)
-    issued = models.DateField()
-    issuer = models.ForeignKey(Institution, on_delete=models.RESTRICT)
-    experience = models.ForeignKey(Experience, on_delete=models.RESTRICT, null=False, blank=False)
+    issued_id = models.DateField(null=False, blank=False)
+    issuer_id = models.ForeignKey(Institution, on_delete=models.RESTRICT)
+    experience_id = models.ForeignKey(Experience, on_delete=models.RESTRICT, null=False, blank=False, default='')
     image = models.ImageField(null=False, blank=False)
-    def _str_(self):
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
         return self.title  
 
 
