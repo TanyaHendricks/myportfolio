@@ -17,7 +17,7 @@ class Interest(models.Model):
 
 class Website(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False, unique=True)
-    image = models.ImageField(null=False, blank=False, default='')
+    image = models.ImageField(null=False, blank=False, default="Default_Interest.png")
     url = models.URLField(null=False, blank=False)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     def __str__(self):
@@ -26,7 +26,7 @@ class Website(models.Model):
 class Institution(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False, unique=True)
     description = models.TextField(max_length=1000, null=False, blank=False)
-    logo = models.ImageField(null=True, blank=True)
+    logo = models.ImageField(null=True, blank=True, default="Default_Institute.jpg")
     website_id = models.ForeignKey(Website, on_delete=models.RESTRICT, null=True, blank=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     def __str__(self):
@@ -62,7 +62,7 @@ class Document(models.Model):
     issued_id = models.DateField(null=False, blank=False)
     issuer_id = models.ForeignKey(Institution, on_delete=models.RESTRICT)
     experience_id = models.ForeignKey(Experience, on_delete=models.RESTRICT, null=False, blank=False, default='')
-    image = models.ImageField(null=False, blank=False)
+    image = models.ImageField(null=False, blank=False, default="Default_Institute.jpg")
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     def __str__(self):
         return self.title  
