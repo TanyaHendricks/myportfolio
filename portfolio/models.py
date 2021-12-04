@@ -51,6 +51,7 @@ class Experience(models.Model):
     commenced = models.DateField(null=False, blank=False)
     completed = models.DateField(null=False, blank=False)
     description = models.TextField(max_length=1000, null=False, blank=False)
+    tags = models.ManyToManyField('Tag', null=False, blank=False)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     def __str__(self):
         return self.title
@@ -66,5 +67,8 @@ class Document(models.Model):
     def __str__(self):
         return self.title  
 
-
-
+class Tag(models.Model):
+    name = models.CharField(max_length=200)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    def __str__(self):
+        return self.name
