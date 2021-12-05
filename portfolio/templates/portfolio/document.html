@@ -1,7 +1,5 @@
 {% extends 'main.html' %}
-
 {% block content %}
-
 
 <div class="m-5">
     <div class="container">
@@ -9,8 +7,7 @@
             <div class="col">
                 <a href="{% url 'portfolio' %}" class="btn btn-outline-dark mb-3">Back</a>
                 <div style="height: 90vh;">
-                    <img style="max-width: 100%; max-height: 100%";                     
-                        src="{{document.image.url}}">
+                    <img class="image-view-document" src="{{document.image.url}}">
                     <p>This was received for....</p>
                 </div>
             </div>
@@ -18,7 +15,5 @@
     </div>
 </div>
     
-
-
 
 {% endblock content %}
