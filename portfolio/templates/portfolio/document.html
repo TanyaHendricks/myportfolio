@@ -4,12 +4,13 @@
 <div class="m-5">
     <div class="container">
         <div class="row justify-content-center">
+
+
             <div class="col">
-                <a href="{% url 'portfolio' %}" class="btn btn-outline-dark mb-3">Back</a>
-                <div style="height: 90vh;">
-                    <img class="image-view-document" src="{{document.image.url}}">
-                    <p>This was received for....</p>
-                </div>
+                <a href="{% url 'portfolio' %}#testimonial" class="btn btn-primary btn-dark">Back</a>
+                <div class="viewDocumentPage">
+                    <img class="documentImage" src="{{document.image.url}}">
+                 </div>
             </div>
         </div>
     </div>
