@@ -50,8 +50,8 @@ class Experience(models.Model):
     institution_id = models.ForeignKey(Institution, on_delete=models.RESTRICT)
     commenced = models.DateField(null=False, blank=False)
     completed = models.DateField(null=False, blank=False)
-    description = models.TextField(max_length=1000, null=False, blank=False)
-    tags = models.ManyToManyField('Tag', null=False, blank=False)
+    description = models.TextField(max_length=1000)
+    tags = models.ManyToManyField('Tag', blank=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     def __str__(self):
         return self.title
