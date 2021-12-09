@@ -1,283 +1,288 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700'); 
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
 /*---Styles---*/
-html, body{
-    height:100%;
-    width:100%;
-    font-family:'Poppins', sans-serif;
-    color:#222
- }
- .navbar {
-     padding: .8rem;
- }
- .navbar-nav li {
-     padding-right:20px;
- }
- .nav-link {
-     font-size:1.1em !important;
- }
- .carousel-inner img {
-     width:100%;
-     height:100%; 
- }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+.navbar {
+  padding: 0.8rem;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
 .carousel-caption {
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%)
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .carousel-caption h1 {
-     font-size: 500%; 
-     text-transform: uppercase;
-     text-shadow:1px 1px 15px #000;
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
 }
- .carousel-caption h3 {
-     font-size: 200%; 
-     font-weight: 500;
-     text-shadow:1px 1px 15px rgb(65, 5, 5);  
-     padding-bottom: 1rem;  
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 15px rgb(65, 5, 5);
+  padding-bottom: 1rem;
 }
-.caption2{
-    position:absolute;
-    font-weight: 500;
-   top:35%;
-
-
+.caption2 {
+  position: absolute;
+  font-weight: 500;
+  top: 35%;
 }
-.caption3{
-    position:absolute;
-    top:20%;
-    transform: translateX(20%); 
+.caption3 {
+  position: absolute;
+  top: 20%;
+  transform: translateX(20%);
 }
 .btn-primary {
-     background-color:#1a686b;
-     border: 1px solid #1a686b;
+  background-color: #1a686b;
+  border: 1px solid #1a686b;
 }
 .btn-primary:hover {
-     background-color:#00bac0;;  
-     border: 1px solid #0e1a1a;
+  background-color: #00bac0;
+  border: 1px solid #0e1a1a;
 }
-.jumbotron{
-     padding:1rem;
-     border-radius:0;
- }
- .padding {
-     padding-bottom:2rem;
- }
- .welome {
-     width:75%;
-     margin:0 auto;
-     padding-top:2rem;
- }
- .welcome hr {
-     border-top:2px solid #2c4d4e;
-     width:50%;
-     margin-top:.3rem;
-     margin-bottom:.1rem;
- }
- .built .fa-youtube, .fa-python, .fa-html5, .fa-js, .fa-css3, .fa-bold, .fa-code, .fa-microsoft, .fa-google, .fa-font-awesome, 
- .fa-graduation-cap, .fa-image, .fa-hand-scissors, .fa-trademark {    
-     color:#1a686b;
-     font-size:3em;
-     margin:1rem; 
- } 
-
- .social_fb, .social_li, .social_gh, .social_yt  { 
-    font-size:2em;
-    margin:1rem; 
-     color:#1a686b;    
- }
-
-.social_fb:hover, .social_li:hover, .social_gh:hover, .social_yt:hover {
-    color:#00bac0;
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
 }
- .interests {
-     width:100%;
-     margin-bottom:2rem;     
- }
- .interest_image{
-     width:250px; 
-     height:200px; 
-     object-fit:cover;
- }
-
- .ref_image {
-    object-fit:cover;
+.padding {
+  padding-bottom: 2rem;
 }
- .card{
-     max-width:100%;
- }
- .social a {
-     font-size: 2em;
-     padding: 2rem;
- } 
- footer{
-     background-color:#535151;
-     color:rgb(255, 255, 255);
-     padding-top: 3rem;
- }
- .image-logo{
-    max-height: 200px;
-    max-width: 480px;
+.welome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
- .logo_footer{
-     height: 14rem;
- }
- hr.light{
-     border-top:2px solid rgb(255, 255, 255);
-     width: 85%;
-     margin-top: .8rem;
-     margin-bottom: 1rem;
- }
+.welcome hr {
+  border-top: 2px solid #2c4d4e;
+  width: 50%;
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+.built .fa-youtube,
+.fa-python,
+.fa-html5,
+.fa-js,
+.fa-css3,
+.fa-bold,
+.fa-code,
+.fa-microsoft,
+.fa-google,
+.fa-font-awesome,
+.fa-graduation-cap,
+.fa-image,
+.fa-hand-scissors,
+.fa-trademark {
+  color: #1a686b;
+  font-size: 3em;
+  margin: 1rem;
+}
 
- .viewDocumentPage{
-   height: 90vh;
+.social_fb,
+.social_li,
+.social_gh,
+.social_yt {
+  font-size: 2em;
+  margin: 1rem;
+  color: #1a686b;
+}
 
- }
+.social_fb:hover,
+.social_li:hover,
+.social_gh:hover,
+.social_yt:hover {
+  color: #00bac0;
+}
+.interests {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.interest_image {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
 
- .documentImage{
-    max-width: 100%; 
-   max-height: 100%;
- }
-
- .img_about{
+.ref_image {
+  object-fit: cover;
+}
+.card {
+  max-width: 100%;
+}
+.social a {
+  font-size: 2em;
+  padding: 2rem;
+}
+footer {
+  background-color: #535151;
+  color: rgb(255, 255, 255);
+  padding-top: 3rem;
+}
+.image-logo {
   max-height: 200px;
- }
-  
- 
+  max-width: 480px;
+}
+.logo_footer {
+  height: 14rem;
+}
+hr.light {
+  border-top: 2px solid rgb(255, 255, 255);
+  width: 85%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
 
+.viewDocumentPage {
+  height: 90vh;
+}
 
+.documentImage {
+  max-width: 100%;
+  max-height: 100%;
+}
 
+.img_about {
+  max-height: 200px;
+}
 
 /*---Media Queries---*/
 
-@media (max-width:992px) {
-    .caption3{
-        top:0%;
-        font-size: 70%; 
-    }
+@media (max-width: 992px) {
+  .caption3 {
+    top: 0%;
+    font-size: 70%;
+  }
 }
-@media (max-width:768px) {
-    .carousel-caption {
-        top:45%;
-
-    }
-    .carousel-caption h1 {
-         font-size: 350%; 
-   
-    }
-     .carousel-caption h3 {
-         font-size: 140%; 
-         font-weight: 400;
-        padding-bottom: 1.2rem;  
-    }
-    .caption3{
-        top:10%;
-        font-size: 70%; 
-    }
-    .carousel-caption .btn {
-        font-size: 95%;
-        padding: 8px, 14px;
-    }
-    .display-4{
-        font-size: 200%;
-    }
-    .social_fb, .social_li, .social_gh, .social_yt  { 
-        font-size: 150%;  
-        padding: 0.1%
-     }
-
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 45%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: 1.2rem;
+  }
+  .caption3 {
+    top: 10%;
+    font-size: 70%;
+  }
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px, 14px;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
+  .social_fb,
+  .social_li,
+  .social_gh,
+  .social_yt {
+    font-size: 150%;
+    padding: 0.1%;
+  }
 }
-@media (max-width:576px) {
-    .carousel-caption {
-        top:40%;
-    }
-    .carousel-caption h1 {
-         font-size: 250%;    
-    }
-     .carousel-caption h3 {
-         font-size: 110%; 
-    }
-    .caption3{
-        top:20%;
-        font-size: 70%; 
-    }
-    .carousel-caption .btn {
-        font-size: 90%;
-        padding: 4px, 8px;
-    }
-    .display-4{
-        font-size: 160%;
-    }
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 110%;
+  }
+  .caption3 {
+    top: 20%;
+    font-size: 70%;
+  }
+  .carousel-caption .btn {
+    font-size: 90%;
+    padding: 4px, 8px;
+  }
+  .display-4 {
+    font-size: 160%;
+  }
 }
-
 
 /*---Firefox Bug Fix---*/
 .carousel-item {
-    transition:-webkit-transform 0.5s ease;
-    transition:transform 0.5s ease;
-    transition:transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-backface-visibility:visible;
-    backface-visibility:visible;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
 }
 /*---Fixed Background Image---*/
 figure {
-    position:relative;
-    width:100%;
-    height:60%;
-    margin:0!important;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0 !important;
 }
 .fixed-wrap {
-    clip:rect(0, auto, auto, 0);
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 #fixed {
-    background-image:url('/static/images/Fixed_Background_Image1.jpg');
-    position:fixed;
-    display:flex;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-position:center center;
-    -webkit-transform:translateZ(0);
-            transform:translateZ(0);
-    will-change:transform;
-    align-items: center;
+  background-image: url("/static/images/Fixed_Background_Image1.jpg");
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  align-items: center;
 }
-.quote_1{
+.quote_1 {
+  position: fixed;
+  top: 20%;
+  width: 100%;
+  text-align: center;
 
-    position:fixed; 
-    top: 20%;
-    width:100%;
-    text-align: center;
-
-    font-size: 200%; 
-    font-weight: 500;
-    color:rgb(255, 255, 255);
-    text-shadow:1px 1px 15px rgb(73, 10, 10);    
+  font-size: 200%;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 15px rgb(73, 10, 10);
 }
-.post{
-    padding: 20px;
-    background: #f1f1f1;
-    font-size: 18px;
+.post {
+  padding: 20px;
+  background: #f1f1f1;
+  font-size: 18px;
 }
-#more{
-    display: none;
+#more {
+  display: none;
 }
-
-
-
 
 /*---Bootstrap Padding Fix---*/
-    [class*="col-"] {
-    padding:1rem;
+[class*="col-"] {
+  padding: 1rem;
 }
-
 
 /*---Breakpoints in Bootstrap reference---*/
 /*
@@ -306,7 +311,6 @@ figure {
         more than 1200px)
         @media (min-width:1200px) {...}
 */
-
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  */
 -------------------------------- 
@@ -350,7 +354,7 @@ Main Components
 }
 .cd-horizontal-timeline::before {
   /* never visible - this is used in jQuery to check the current MQ */
-  content: 'mobile';
+  content: "mobile";
   display: none;
 }
 .cd-horizontal-timeline.loaded {
@@ -370,9 +374,10 @@ Main Components
   margin: 0 40px;
   overflow: hidden;
 }
-.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+.cd-horizontal-timeline .events-wrapper::after,
+.cd-horizontal-timeline .events-wrapper::before {
   /* these are used to create a shadow effect at the sides of the timeline */
-  content: '';
+  content: "";
   position: absolute;
   z-index: 2;
   top: 0;
@@ -381,12 +386,20 @@ Main Components
 }
 .cd-horizontal-timeline .events-wrapper::before {
   left: 0;
-  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(
+    left,
+    #f8f8f8,
+    rgba(248, 248, 248, 0)
+  );
   background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
 }
 .cd-horizontal-timeline .events-wrapper::after {
   right: 0;
-  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(
+    right,
+    #f8f8f8,
+    rgba(248, 248, 248, 0)
+  );
   background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
 }
 .cd-horizontal-timeline .events {
@@ -442,7 +455,7 @@ Main Components
 }
 .cd-horizontal-timeline .events a::after {
   /* this is used to create the event spot */
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   right: auto;
@@ -481,7 +494,7 @@ Main Components
   }
   .cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
-    content: 'desktop';
+    content: "desktop";
   }
 }
 
@@ -511,7 +524,7 @@ Main Components
 }
 .cd-timeline-navigation a::after {
   /* arrow icon */
-  content: '';
+  content: "";
   position: absolute;
   height: 16px;
   width: 16px;
@@ -524,7 +537,7 @@ Main Components
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(../img/cd-arrow.svg) no-repeat 0 0;
+  background: url(../image/ornament_timeline_endpoints.png) no-repeat 0 0;
 }
 .cd-timeline-navigation a.prev {
   left: 0;
@@ -590,17 +603,20 @@ Main Components
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+.cd-horizontal-timeline .events-content li.enter-right,
+.cd-horizontal-timeline .events-content li.leave-right {
   -webkit-animation-name: cd-enter-right;
   -moz-animation-name: cd-enter-right;
   animation-name: cd-enter-right;
 }
-.cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+.cd-horizontal-timeline .events-content li.enter-left,
+.cd-horizontal-timeline .events-content li.leave-left {
   -webkit-animation-name: cd-enter-left;
   -moz-animation-name: cd-enter-left;
   animation-name: cd-enter-left;
 }
-.cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+.cd-horizontal-timeline .events-content li.leave-right,
+.cd-horizontal-timeline .events-content li.leave-left {
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   animation-direction: reverse;
@@ -622,13 +638,14 @@ Main Components
   margin: 10px auto;
 }
 .cd-horizontal-timeline .events-content em::before {
-  content: '- ';
+  content: "- ";
 }
 .cd-horizontal-timeline .events-content p {
   font-size: 1.4rem;
   color: #959595;
 }
-.cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
+.cd-horizontal-timeline .events-content em,
+.cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
 @media only screen and (min-width: 768px) {
@@ -721,7 +738,3 @@ Main Components
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  */
-
-
-
-
