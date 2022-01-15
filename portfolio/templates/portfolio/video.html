@@ -1,0 +1,20 @@
+{% extends 'index.html' %} {% load static %} {% block content %}
+
+<div class="m-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <!-- <a
+        href="{% url 'portfolio' %}#skills"
+          class="btn btn-primary btn-dark"
+          >Back</a
+        > -->
+        <div class="embed-responsive embed-responsive-21by9">
+          <iframe class="embed-responsive-item" src="{{video.image.url}}"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

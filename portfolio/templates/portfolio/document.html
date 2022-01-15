@@ -1,0 +1,20 @@
+{% extends 'index.html' %} {% load static %} {% block content %}
+
+<div class="m-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <!-- <a
+          href="{{ request.META.HTTP_REFERER }}"
+          class="btn btn-primary btn-dark"
+          >Back</a
+        > -->
+        <div class="viewDocumentPage">
+          <img class="documentImage" src="{{document.image.url}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

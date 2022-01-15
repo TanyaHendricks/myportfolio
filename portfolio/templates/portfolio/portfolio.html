@@ -1,0 +1,715 @@
+
+{% extends 'index.html' %} {% load static %} {% block content %}
+
+<!--Resume-->
+
+<!--Navigation-->
+
+  <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="image-logo" src="{% static 'images/Logo_TJH_Grey+DuckBlue_WalkByFaith_Long.PNG' %}">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">       
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#connect">Connect</a>
+          </li>
+        </ul>
+      </div>  
+    </div>
+  </nav>
+
+<!--Carousel-->  
+
+  <div id="slides" class="carousel slide" data-ride="carousel">    
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li> 
+      <li data-target="#slides" data-slide-to="1"></li> 
+      <li data-target="#slides" data-slide-to="2"></li>      
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/Slider_Background1.jpg' %}">
+        <div class="carousel-caption">   
+            <h1 class="display-1">Resume</h1>         
+             <a href="#timeline"><button type="button" class="btn btn-outline-light btn-outline-dark lead" >Timeline</button></a>
+             <a href="#references"><button type="button" class="btn btn-primary btn-dark lead">References</button></a>          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Slider_Background2_resized.jpg' %}"> 
+        <div class="carousel-caption caption2">
+          <h3><p>"Live as if you were to die tomorrow. Learn as if you were to live forever"
+          </p><p>-Mahatma Ghandi</p></h3>
+        </div>           
+      </div>
+      <div class="carousel-item">
+          <img src="{% static 'images/Slider_Background3_resized.jpg' %}">          
+          <div class="carousel-caption caption3">
+            <h3><p>Gall's Law</p><p>"A complex system that works is invariably found to have evolved from a simple system that worked.
+              The inverse proposition also appears to be true: a complex system designed from scratch never works 
+              and cannot be made to work. You have to start over, beginning with a simple system."
+            </p><p>-John Gall, systems theorist</p></h3>
+          </div>          
+        </div>
+      </div>       
+      </div>
+    </div>
+  </div>
+
+<!--Jumbotron-->
+
+  <div class="container-fluid">
+    <div class="row jumbotron">
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+        <p class="lead">I registered for a Bachelor of Science Degree in Information Technology in 2019 from the North-West University. 
+          As a final year IT student in 2021, I completed and passed the last eight of the thirty-two prescribed modules and anticipate graduating in the first quarter of 2022.
+        </p>
+      </div>
+      <div class="col-xs-12 col-xs-12 col-md-3 col-lg-9 col-xs-2">
+        <a href="http://distance.nwu.ac.za/BSc-InformationTechnology"><button type="button" class="btn btn-primary btn-dark btn-lg">NWU BSc IT</button></a>
+      </div>      
+    </div>
+  </div>
+  
+<!--Built with-->
+
+  <div class="container-fluid padding">
+    <div class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4">Built with...</h1>
+      </div>
+      <hr>
+      <div class="col-12">
+        <p class="lead">This website was constructed with the following technologies, tools and support.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid padding">
+    <div class="row text-center built padding">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-python"></i>
+        <h3>PYTHON</h3>
+        <p>The latest version of Python at the time, 3.7.6</p>
+      </div>  
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-html5"></i>
+        <h3>HTML5</h3>
+        <p>The latest version of HTML at the time, HTML5</p>
+      </div> 
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-js"></i>
+        <h3>JAVASCRIPT</h3>
+        <p>The latest version of Javascript at the time, ES2015</p>
+      </div>  
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-css3"></i>
+        <h3>CSS3</h3>
+        <p>The latest version of CSS at the time, CSS3</p>
+      </div>      
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-bold"></i>
+        <h3>BOOTSTRAP</h3>
+        <p>Bootstrap 4</p>
+      </div> 
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-code"></i>
+        <h3>DJANGO</h3>
+        <p>The latest version of Django at the time, 3.2.9</p>
+      </div> 
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-microsoft"></i>
+        <h3>VISUAL STUDIO CODE</h3>
+        <p>The latest version of Visual Studio Code at the time, 3.7.6</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-google"></i>
+        <h3>GOOGLE FONTS</h3>
+        <p>Font from Google Font API, style Poppins</p>
+      </div>    
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-font-awesome"></i>
+        <h3>FONT AWESOME</h3>
+        <p>Icons from Font Awesome API</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-youtube"></i>
+        <h3>YOUTUBE</h3>
+        <p>Video support from Youtube channel of Drew Ryan</p>
+      </div>   
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>UDEMY</h3>
+        <p>Video support from Udemy course by Dennis Ivy</p>
+      </div>   
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-image"></i>
+        <h3>UNSPLASH</h3>
+        <p>Photos from Unsplash uploaded by Christopher Gower and Riccardo Annandale</p>
+      </div>  
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-hand-scissors"></i>
+        <h3>PICRESIZE</h3>
+        <p>Photos resized with online service from Picresize</p>
+      </div>  
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-trademark"></i>
+        <h3>DESIGNEVO.COM</h3>
+        <p>Logo template from Designevo.com</p>
+      </div>   
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-ship"></i>
+        <h3>SURFING-WAVES.COM</h3>
+        <p>RSS feed setup with Surfing-waves.com</p>
+      </div>  
+    </div>
+
+    <hr class="my-4">
+  </div>
+
+<!--About-->
+
+    <div class="container">
+      <article class="row single-post mt-5 no-gutters">
+          <div class="col">
+              <div class="image-wrapper float-left pr-3">
+                  <img class="img_about" src="{% static 'images/About_side_image5.png' %}" alt="">
+              </div>
+              <div class="single-post-content-wrapper p-3">
+                <h2 id="about">About...</h2>  
+                <p>Shortly after matric in 1999, I started a career in the private sector as Admin Officer at Shoprite Checkers Head Office and quickly learned that hard work and dedication is required to flourish in the working world. I was introduced to bookkeeping in 2004 after completing a bookkeeping course and started with a Bookkeeper job for contractors in the building industry. I then pursued part-time studies in accounting and financial management and landed an Assistant Accountant job in 2006 at Maitland Vinegar Works, a subsidiary of Pioneer Foods. I became a Rental Accountant in 2009, in the automotive industry, at the Rola Motor Group. The Rola Motor Group elected nineteen lower management employees to enrol for a Management Development Programme in collaboration with the School for  Executive Business Development of the University of Stellenbosch. I was nominated as the only female candidate in this male-dominated industry and completed the programme. </p>                 
+                <p>My public service commenced at the Western Cape Provincial Government as a Financial Analyst / State Accountant at Strategic Budget Analysis in 2011. I was promoted to Senior State Accountant in 2015 and was part of a team of analysts and specialists, which provided an auxiliary service to the CFO and the executive members of the Department of Health. </p>
+                <p>I resigned from public service in 2016 and resumed the administrative and financial duties until recent of the printing and design shop started by my husband and myself in 2012. It allowed me the opportunity to assist in the growth of our establishment. I could work closer to home and be part of important milestones and phases of the education and development of our two sons. </p>   
+                <p>I started with a BSc in Information Technology in 2019, via distance studies, to pursue a career in software engineering. This qualification presented me with the opportunity to combine experience acquired from private and public sectors and my entrepreneurial role with new knowledge; to form a solid basis for a career in information technology. I completed the third and final year of the BSc IT qualification of the North-West University’s Open Distance Learning programme in 2021. </p>
+              </div>
+          </div>
+      </article>
+  </div>
+<hr>
+
+<!--Skills-->
+<button class="interests" data-toggle="collapse" data-target="#interests">navigate skills on timeline with arrow keys</button> 
+<div>
+  <div class="container-fluid">
+    <div class="row welcome text-center padding">
+      <div class="col-12">
+        <h1 class="display-4" id="skills">Skills</h1>
+      </div>
+      <hr>          
+    </div> 
+  </div>  
+      
+  <section class="cd-horizontal-timeline">
+    <div class="timeline">
+      <div class="events-wrapper">  
+        <div class="events">   
+          <ol>       
+            
+            <!-- <li><a href="#0" data-date="01/08/1998" class="selected">01 Aug</a>
+            <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+            <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+            <li><a href="#0" data-date="20/05/2014">20 May</a></li>
+            <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+            <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+            <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+            <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+            <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+            <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+            <li><a href="#0" data-date="03/03/2015">3 Mar</a></li> --> 
+
+            <!-- {% for experience in experiences %}
+              {% if forloop.first %}
+                <li><a href="#0" data-date={{experience.completed|date:"d/m/Y"}} class="selected">{{experience.completed|date:"d M"}}</a>
+              {% endif %} 
+              {% if not forloop.first %}
+                <li><a href="#0" data-date={{experience.completed|date:"d/m/Y"}}>{{experience.completed|date:"d M"}}</a></li>
+              {% endif %}
+            {% endfor %} -->
+
+            {% for experience in experiences %}
+              {% if forloop.first %}
+                <li><a href="0#" data-date={{experience.completed|date:"d/m/Y"}} class="selected"></a></li>
+              {% endif %} 
+              {% if not forloop.first %}
+                <li><a href="0#" data-date={{experience.completed|date:"d/m/Y"}}></a></li>
+              {% endif %}
+            {% endfor %}
+
+          </ol>       
+          
+           <span class="filling-line" aria-hidden="true"></span>
+        </div> <!-- .events -->
+      </div> <!-- .events-wrapper -->
+            
+      <ul class="cd-timeline-navigation">
+        <li><a href="0#" class="prev inactive">Prev</a></li>
+        <li><a href="0#" class="next">Next</a></li>
+      </ul> <!-- .cd-timeline-navigation -->
+    </div> <!-- .timeline -->
+  
+    <div class="events-content">
+      <ol>
+        {% for experience in experiences %}
+        
+          {% if forloop.first %}          
+            <li class="selected" data-date={{experience.completed|date:"d/m/Y"}}>      
+              <p>
+                {% for tag in experience.tags.all %}
+                  <span class="badge badge-pill badge-info mx-1">{{tag}}</span>
+                {% endfor %}
+              </p>       
+              <br>         
+              <h2 >{{experience.title}}</h2>
+              <br>
+              <hr>           
+              <p>
+                <em>{{experience.type}} from {{experience.commenced|date:"j M Y"}} to {{experience.completed|date:"j M Y"}}</em>
+              </p>             
+              <p>	
+                {{experience.description}}
+              </p>
+              <br>
+              <p>                
+                {% for document in experience.documents.all %}                 
+                <a href="{% url 'document' document.id %}" >
+                  <img class="experience_image mx-5" src="{{document.image.url}}">
+                </a>                                    
+                {% endfor %}                  
+              </p>
+              <br>
+              <div>      
+                {% for video in experience.videos.all %} 
+                <video class="mx-5" width="25%" controls>
+                  <source src="{{video.webm.url}}" type="video/webm">
+                  <source src="{{video.mp4.url}}" type="video/mp4">
+                  Your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
+                </video>              
+                {% endfor %}  
+              </div>
+              <br>
+              <hr>        
+              <p>  
+                <em>About {{experience.institution_id}}</em>                             
+              </p>
+              <p>
+                {{experience.institution_id.description}}
+              </p>
+              <br>
+              <p>                
+                <a  href={{experience.institution_id.website_id.url}}>
+                  <img class="experience_image mx-5" src={{experience.institution_id.logo.url}} >
+                </a>  
+              </p>
+            </li>
+          {% endif %}
+
+          {% if not forloop.first %}
+          <li data-date={{experience.completed|date:"d/m/Y"}}>      
+            <p>
+              {% for tag in experience.tags.all %}
+                <span class="badge badge-pill badge-info mx-1">{{tag}}</span>
+              {% endfor %}
+            </p>       
+            <br>         
+            <h2 >{{experience.title}}</h2>
+            <br>
+            <hr>           
+            <p>
+              <em>{{experience.type}} from {{experience.commenced|date:"j M Y"}} to {{experience.completed|date:"j M Y"}}</em>
+            </p>             
+            <p>	
+              {{experience.description}}
+            </p>
+            <br>
+            <p>                
+              {% for document in experience.documents.all %}                 
+              <a href="{% url 'document' document.id %}" >
+                <img class="experience_image mx-5" src="{{document.image.url}}">
+              </a>                                    
+              {% endfor %}                  
+            </p>
+            <br>
+            <div>      
+              {% for video in experience.videos.all %} 
+              <video class="mx-5" width="25%" controls>
+                <source src="{{video.webm.url}}" type="video/webm">
+                <source src="{{video.mp4.url}}" type="video/mp4">
+                Your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
+              </video>              
+              {% endfor %}  
+            </div>
+            <br>
+            <hr>        
+            <p>  
+              <em>About {{experience.institution_id}}</em>                             
+            </p>
+            <p>
+              {{experience.institution_id.description}}
+            </p>
+            <br>
+            <p>                
+              <a  href={{experience.institution_id.website_id.url}}>
+                <img class="experience_image mx-5" src={{experience.institution_id.logo.url}} >
+              </a>  
+            </p>
+          </li>
+          {% endif %}
+
+        {% endfor %}
+
+       <!-- <li class="selected" data-date="01/08/1998">
+          <h2>Microsoft Word Intermediary Short Course</h2>
+          <em>August 1, 1998</em>
+          <p>	
+            Zandvliet Polifyn Computer Centre is an equipped community training facility at Zandvliet High School. The objective of this 30-hour training was to cultivate proficiency in Microsoft Word to intermediary level.
+          </p>
+        </li>
+
+        <li data-date="28/02/2014">
+          <h2>Event title here</h2>
+          <em>February 28th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="20/04/2014">
+          <h2>Event title here</h2>
+          <em>March 20th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="20/05/2014">
+          <h2>Event title here</h2>
+          <em>May 20th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="09/07/2014">
+          <h2>Event title here</h2>
+          <em>July 9th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="30/08/2014">
+          <h2>Event title here</h2>
+          <em>August 30th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="15/09/2014">
+          <h2>Event title here</h2>
+          <em>September 15th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="01/11/2014">
+          <h2>Event title here</h2>
+          <em>November 1st, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="10/12/2014">
+          <h2>Event title here</h2>
+          <em>December 10th, 2014</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="19/01/2015">
+          <h2>Event title here</h2>
+          <em>January 19th, 2015</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li>
+  
+        <li data-date="03/03/2015">
+          <h2>Event title here</h2>
+          <em>March 3rd, 2015</em>
+          <p>	
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          </p>
+        </li> -->
+      </ol>
+
+    </div> <!-- .events-content -->
+
+  </section>
+</div>
+<br>
+<br>
+
+ 
+
+<!--Fixed Background Image-->
+
+  <figure>
+    <div class="fixed-wrap">
+      <div id="fixed"> 
+        <h3 class="quote_1"><p>"Coming together is the beginning.</p>
+          <p>Keeping together is progress.</p> 
+          <p>Working together is success."</p>
+          <p>-Henry Ford</p>       
+        </h3>
+      </div>
+    </div>
+  </figure>
+  
+<!--Click I am...-->
+
+<button class="interests" data-toggle="collapse" data-target="#interests">click for interests</button>
+  <div id="interests" class="collapse" >
+
+    <div class="container-fluid padding">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4">I am a...</h1>
+        </div>
+        <hr>
+      </div> 
+    </div> 
+
+    <div class="container-fluid padding">
+      <div class="row justify-content-md-center padding">
+          {% for interest in interests %}
+          <div class="col-xs-12">
+            <div class="card">
+              <img class="interest_image card-imd-top" src="{{interest.image.url}}">
+              <div class="card-body">
+                <h5 class="card-title">{{interest.title}}</h5>                
+              </div>
+            </div>             
+          </div>
+          {% empty %}
+            <h3>No images...</h3>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+    <hr class="my-4"> 
+
+<!--Testimonials-->
+
+  <div>
+    <div class="container-fluid padding">
+      <div class="row welcome text-center padding">
+        <div class="col-12">
+          <h1 class="display-4" id="testimonial">Testimonials</h1>
+        </div>
+        <hr>
+      </div> 
+    </div> 
+
+    <div class="container-fluid padding">
+      <div class="row justify-content-md-center padding">
+          {% for testimonial in testimonials %}
+          <div class="col-xl-3 col-md-6 col-xs-9">
+            <div class="card">
+              <img class="card-img-top" src="{{testimonial.image.url}}">
+            <div class="card-body">
+              <h5 class="card-title mb-3 testimonial">{{testimonial.title}}</h5> 
+              <a href="{% url 'document' testimonial.id %}" class="btn btn-primary btn-dark">View</a>                    
+            </div>
+          </div>             
+        </div>
+        {% empty %}
+        <h3>No images...</h3>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <br> 
+  <hr class="my-4"> 
+   
+<!--References-->
+
+  <div>
+    <div class="container-fluid padding">
+      <div class="row welcome text-center padding">
+        <div class="col-12">
+          <h1 class="display-4" id="references">References</h1>
+        </div>
+        <hr>
+      </div> 
+    </div> 
+
+    <div class="container-fluid padding">
+      <div class="row row justify-content-md-center">   
+
+        {% for reference in references %}
+        <div class="col-xl-3 col-md-6 col-xs-9">
+          <div class="card">
+            <img class="ref_image card-imd-top" src="{{reference.image.url}}">
+            <div class="card-body">
+              <h4 class="card-title">{{reference.name}}</h4>
+              <p class="card-text">{{reference.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{reference.email}}</li>
+              <li class="list-group-item">Tel: {{reference.phone}}</li>
+            </ul>
+            <div class="card-body">
+              <a href="{{reference.url}}" class="btn btn-primary btn-dark">See linkedIn Profile</a>
+            </div>
+          </div>      
+        </div>
+        {% empty %}
+        <h3>No images...</h3>
+        {% endfor %}        
+      </div>         
+    </div>
+  </div>
+<hr class="my-4"> 
+
+<!--My philosophy-->
+
+<div class="container-fluid padding">
+  <div class="row justify-content-md-center padding">
+    <div class="col-xl-4 col-xs-8">
+      <h2>My Philosophy</h2>     
+      <p>I believe that continual development and learning is crucial to survival in the 21st century 
+        and for keeping abreast with technology. </p>
+        <p> I am of the opinion that everything in life, 
+        irrespective of its insignificance, should be appreciated. That every small part or being; 
+        is needed by a larger system or society; in order to reach a state of overall synergy. </p>
+        <p>My focus in life is to navigate towards my destiny, 
+        by gaining relevant insight to make the right choices and by successfully managing every moment of life which I am blessed with.       
+      </p>       
+  </div>
+  <div class="col-xl-4 col-xs-8"> 
+      <img src="{% static 'images/MyPhilosophy_Image1.jpg' %}" class="img-fluid">    
+  </div>
+</div>
+
+<hr class="my-4"> 
+  
+<!--Connect-->
+
+<div class="container-fluid">
+
+  <div class="container-fluid">
+    <div class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4" id="connect">Connect</h1>
+      </div>
+      <hr>    
+    </div> 
+  </div>
+  <div class="col-12 social ">
+    <div class="row justify-content-center">
+      <a href="https://www.linkedin.com/in/tanya-hendricks-67bb41225"><i class="social_li fab fa-linkedin"></i></a>
+      <a href="https://github.com/TanyaHendricks/myportfolio.git"><i class="social_gh fab fa-github"></i></a>
+    </div>  
+  </div>  
+</div>
+<hr class="my-4"> 
+
+<!--RSS-->
+
+<div class="container-fluid padding">
+  <div class="row justify-content-md-center padding offerzen">
+    <div class="col-xl-4 col-xs-8 offerzen padding">
+      <a  href="https://www.offerzen.com/blog/offerzen-podcast-conversations-thought-leaders-tech">
+        <img alt="offerzen-podcast" src="{% static 'images/Logo_OfferZenPodCast.PNG' %}">
+      </a>      
+  </div>
+  <div class="col-xl-4 col-xs-8"> 
+    <script type="text/javascript">  
+      rssfeed_url = new Array(); 
+      rssfeed_url[0]="http://feeds.backtracks.fm/feeds/offerzen/offerzen-podcast/feed.xml?1638850262";  
+      rssfeed_frame_width="600"; 
+      rssfeed_frame_height="600"; 
+      rssfeed_scroll="on"; 
+      rssfeed_scroll_step="6"; 
+      rssfeed_scroll_bar="on"; 
+      rssfeed_target="_top"; 
+      rssfeed_font_size="16"; 
+      rssfeed_font_face="Garamond"; 
+      rssfeed_border="on"; 
+      rssfeed_css_url=""; 
+      rssfeed_title="off"; 
+      rssfeed_title_name=""; 
+      rssfeed_title_bgcolor="#800080"; 
+      rssfeed_title_color="#fff"; 
+      rssfeed_title_bgimage=""; 
+      rssfeed_footer="off"; 
+      rssfeed_footer_name="rss feed"; 
+      rssfeed_footer_bgcolor="#fff"; 
+      rssfeed_footer_color="#333"; 
+      rssfeed_footer_bgimage=""; 
+      rssfeed_item_title_length="200"; 
+      rssfeed_item_title_color="##242f85"; 
+      rssfeed_item_bgcolor="#fff"; 
+      rssfeed_item_bgimage=""; 
+      rssfeed_item_border_bottom="on"; 
+      rssfeed_item_source_icon="on"; 
+      rssfeed_item_date="on"; 
+      rssfeed_item_description="on"; 
+      rssfeed_item_description_length="500"; 
+      rssfeed_item_description_color="#666"; 
+      rssfeed_item_description_link_color="#333"; 
+      rssfeed_item_description_tag="off"; 
+      rssfeed_no_items="0"; 
+      rssfeed_cache = "ca0b2c2461a10bfa476bfe6510ddec65";  
+    </script>  
+    <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>   
+  </div>
+</div>
+
+<!--- Footer -->
+  <footer>
+  <div class="container-fluid padding">
+    <div class="row text-center padding">
+      <div class="col-md-4 align-self-center">
+        <img class="logo_footer" src="{% static 'images/Logo_TJH_Grey+DuckBlue_WalkByFaith.PNG' %}">
+      </div>
+      <div class="col-md-4 align-self-center">
+        <p>Cell: 071 596 3295</p>
+        <p>Landline: 021 852 5201</p>
+        <p>Email: bob4robert@gmail.com</p>
+        <p>Postal Address: PO Box 1178, Somerset West, 7129</p>
+      </div>
+   
+      <div class="col-md-4 align-self-center">        
+        <a href="{% static 'images/CV 20211206.pdf' %}" class="btn btn-primary btn-dark">Download resume in pdf</a> 
+      </div>
+      <div class="col-12">
+        <hr class="light">
+        <h5>&copy; Tanya Hendricks</h5>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+{% endblock content %}
