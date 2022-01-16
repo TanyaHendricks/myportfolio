@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from embed_video.fields import EmbedVideoField
 
 # Create your models here.
 
@@ -68,7 +69,7 @@ class Experience(models.Model):
     completed = models.DateTimeField(null=False, blank=False)
     description = models.TextField(max_length=2100)
     tags = models.ManyToManyField('Tag', blank=True)
-    documents = models.ManyToManyField('Document', null=True, blank=True)    
+    documents = models.ManyToManyField('Document')    
     videos = models.ManyToManyField('Video', blank=True)    
     websites = models.ManyToManyField('Website', blank=True)  
     id = models.UUIDField(default=uuid.uuid4, unique=True,
@@ -98,7 +99,7 @@ class Video(models.Model):
         DocumentType, on_delete=models.RESTRICT, default='')
     title = models.CharField(max_length=100, null=False,
                              blank=False, unique=True)
-    webm = models.FileField(upload_to="video", null=False, blank=False, default="Default.png")
+    url = models.URLField(null=False, blank=False)
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)
 

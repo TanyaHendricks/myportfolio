@@ -45,7 +45,7 @@
         <img src="{% static 'images/Slider_Background1.jpg' %}">
         <div class="carousel-caption">   
             <h1 class="display-1">Resume</h1>         
-             <a href="#timeline"><button type="button" class="btn btn-outline-light btn-outline-dark lead" >Timeline</button></a>
+             <a href="#skills"><button type="button" class="btn btn-outline-light btn-outline-dark lead" >Timeline</button></a>
              <a href="#references"><button type="button" class="btn btn-primary btn-dark lead">References</button></a>          
         </div>
       </div>
@@ -291,13 +291,15 @@
                 {% endfor %}                  
               </p>
               <br>
-              <div>      
-                {% for video in experience.videos.all %} 
-                <video class="mx-5" width="25%" controls>
-                  <source src="{{video.webm.url}}" type="video/webm">
-                  <source src="{{video.mp4.url}}" type="video/mp4">
+              <div class="thumbnail flex-video widescreen" >      
+                {% for video in experience.videos.all %}                      
+                <iframe controls id="player" class="embed-responsive-item encryption"  allowfullscreen frameborder="0"  src={{video.url}} ></iframe>    
+                  
+                <!-- <video class="mx-5" width="25%" controls>
+                  <source src={{video.url}} type="video/webm">
                   Your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
-                </video>              
+                </video>  -->
+  
                 {% endfor %}  
               </div>
               <br>
@@ -343,13 +345,15 @@
               {% endfor %}                  
             </p>
             <br>
-            <div>      
-              {% for video in experience.videos.all %} 
-              <video class="mx-5" width="25%" controls>
-                <source src="{{video.webm.url}}" type="video/webm">
-                <source src="{{video.mp4.url}}" type="video/mp4">
+            <div class="thumbnail flex-video widescreen" >      
+              {% for video in experience.videos.all %}                      
+              <iframe controls id="player" class="embed-responsive-item encryption"  allowfullscreen frameborder="2"  src={{video.url}} ></iframe>    
+                
+              <!-- <video class="mx-5" width="25%" controls>
+                <source src={{video.url}} type="video/webm">
                 Your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
-              </video>              
+              </video>  -->
+
               {% endfor %}  
             </div>
             <br>
