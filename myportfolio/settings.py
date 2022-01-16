@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-mqcwb6w4r6=_h!kd9zjqa$ks8)1fj6#eqx+4*n-(k+99lo01p_
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['resumeet.herokuapp.com']
+ALLOWED_HOSTS = ['resumeet.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
