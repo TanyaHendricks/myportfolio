@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mqcwb6w4r6=_h!kd9zjqa$ks8)1fj6#eqx+4*n-(k+99lo01p_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
-ALLOWED_HOSTS = ['resumeet.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['resumeet.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -153,3 +153,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+import socket
+
+if socket.gethostname() == "server_name":
+    DEBUG = False
+    ALLOWED_HOSTS = ['resumeet.herokuapp.com',]
+    ...
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
+    ...
