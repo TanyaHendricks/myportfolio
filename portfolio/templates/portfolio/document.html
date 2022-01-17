@@ -1,14 +1,28 @@
 {% extends 'index.html' %} {% load static %} {% block content %}
 
+
+
 <div class="m-5">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col">
-        <!-- <a
-          href="{{ request.META.HTTP_REFERER }}"
+        <button
+          
           class="btn btn-primary btn-dark"
-          >Back</a
-        > -->
+          >Back</button
+        >
+
+        
+
+        <script>
+    
+          let btnBack = document.querySelector('button');
+          btnBack.addEventListener('click', () => {
+            window.history.go(-1);
+          })
+
+        </script>
+
         <div class="viewDocumentPage">
           <img class="documentImage" src="{{document.image.url}}" />
         </div>
@@ -16,5 +30,8 @@
     </div>
   </div>
 </div>
+
+
+
 
 {% endblock content %}

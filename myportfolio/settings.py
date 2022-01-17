@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mqcwb6w4r6=_h!kd9zjqa$ks8)1fj6#eqx+4*n-(k+99lo01p_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['resumeet.herokuapp.com', '127.0.0.1']
@@ -39,13 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'embed_video',
-    'portfolio.apps.PortfolioConfig',
-    
-   
-    
-]
 
+    'portfolio.apps.PortfolioConfig',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   
+    
 ]
 
 ROOT_URLCONF = 'myportfolio.urls'
@@ -74,8 +70,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.request'
-                
             ],
         },
     },
@@ -131,18 +125,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = BASE_DIR / 'static/images'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -155,11 +148,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import socket
 
-if socket.gethostname() == "server_name":
+if socket.gethostname() == "herokuapp.com":
     DEBUG = False
     ALLOWED_HOSTS = ['resumeet.herokuapp.com',]
     ...
 else:
     DEBUG = True
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
+    ALLOWED_HOSTS = ["127.0.0.1",]
     ...
