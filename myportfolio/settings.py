@@ -146,13 +146,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-import socket
-
-if socket.gethostname() == "herokuapp.com":
-    DEBUG = False
-    ALLOWED_HOSTS = ['resumeet.herokuapp.com',]
-    ...
-else:
-    DEBUG = True
-    ALLOWED_HOSTS = ["127.0.0.1",]
-    ...
